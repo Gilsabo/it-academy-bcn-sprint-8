@@ -16,7 +16,7 @@ function App() {
       <Route path="/" element ={<RootLayouts />}>
         <Route path="home" element={<Home />} />
         <Route path="starships" element={<Starships />} />
-        <Route path="starships/:index" element= {< StarshipDetail/>} loader={starshipDetailsLoader} />
+        <Route path="starships/:numberUrl" element= {< StarshipDetail/>} loader={starshipDetailsLoader} />
       </Route>
     )
   );

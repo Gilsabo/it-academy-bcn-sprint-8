@@ -1,11 +1,25 @@
-ul {
-    list-style-type: none;
-  }
+.link{
+  text-decoration: none;
+}
 
-  li{
-    border: 1px solid black;
-    text-align: left;
-    width: 50%;
-    padding: 1rem;
-    margin: 0 auto;
-  }
+.starship-box {
+  text-decoration: none;
+  border: 1px solid black;
+  width: 50%;
+  margin:0 auto;
+  text-align: left;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+
+}
+
+.name-starship{
+  margin: 0px;
+}
+
+.model-starship{
+  margin-bottom: 0px;
+}
+ 
+
+ 

@@ -1,26 +1,56 @@
-import {useParams, useLoaderData} from "react-router-dom"
+import { useEffect } from "react";
+import { useState } from "react";
+import { useParams, useLoaderData } from "react-router-dom";
+import "./starshipDetail.css";
 
 const StarshipDetail = () => {
-    const {index} = useParams()
-    const starship = useLoaderData()
-    console.log(starship.results[index])
-    
+  const { numberUrl } = useParams();
+  const starship = useLoaderData();
+  const [imageStarship, setImageStarship] = useState(null);
+  console.log(starship);
 
+  useEffect(() => {
+    setImageStarship(
+      "https://starwars-visualguide.com/assets/img/starships/" +
+        numberUrl +
+        ".jpg"
+    );
+  }, []);
 
-    return ( 
-        <div className="starship">
-            <h2>hola {index} {starship.results[index].name}</h2>
-            
+  return (
+    <>
+      {imageStarship && <img src={imageStarship} alt="fetched-starship" />}
+      
+      <div className="starship">
+        <div className="container-left">
+          <header className="name-starship"><h1> {starship.name}</h1></header>
+          <p>Model: {starship.model} </p>
+          <p>Cost in credits: {starship.cost_in_credits}</p>
+          <p>Atmospheric speed: {starship.max_atmosphering_speed}</p>
+          <p>MGLT: {starship.MGLT}</p>
+          <p>Consumables: {starship.consumables}</p>
+          <p>Passengers: {starship.passengers}</p>
         </div>
-     );
-}
- 
+        <div className="container-right">
+          <p>Manufacturer: {starship.manufacturer}</p>
+          <p>Length: {starship.length}</p>
+          <p>Crew: {starship.crew}</p>
+          <p>Cargo Capacity: {starship.cargo_capacity}</p>
+          <p>Manufacturer: {starship.manufacturer}</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
 export default StarshipDetail;
 
-export const starshipDetailsLoader = async ({params}) => {
-const {index} = params
+export const starshipDetailsLoader = async ({ params }) => {
+  console.log(params);
 
-const res= await fetch ("https://swapi.py4e.com/api/starships/" )
+  const { numberUrl } = params;
 
-return res.json()
-}
+  const res = await fetch("https://swapi.py4e.com/api/starships/" + numberUrl);
+
+  return res.json();
+};
