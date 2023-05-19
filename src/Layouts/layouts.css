@@ -1,8 +1,47 @@
+body{
+    background-color: rgb(10, 11, 11);
+}
+
 .links{
     display: flex;
     justify-content: center;
+    border-width: 1px 0px 1px 0px;
+    border-color:rgb(46,46,46) ;
+    border-style: solid;
+    margin: 1rem 0px 1rem 0px;
+    height: 3.5rem;
 }
 
-.home-nav, .starship-nav{
-    margin: 1rem;
+ .starship-nav{
+    border-color:  rgb(46,46,46) ;
+    border-width: 0px 1px 0px 0.5px;
+    border-style: solid;
+    text-decoration: none;
+    color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    
+}
+
+.home-nav{
+    border-color:  rgb(46,46,46) ;
+    border-width: 0px 0px 0px 1px;
+    border-style: solid;
+    text-decoration: none;
+    color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+}
+
+.home-nav:hover, .starship-nav:hover{
+    border-bottom-width: 0.3rem;
+    border-bottom-color: #1262CA;
+
+}
+
+
+.logo-star-wars{
+    width:22%;
+    margin-top: 1rem;
 }

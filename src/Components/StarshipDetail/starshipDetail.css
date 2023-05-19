@@ -9,6 +9,7 @@ img{
     justify-content: center;
     width: 65%;
     margin: 0 auto;
+    color:  rgb(121, 121, 121);;
 }
 
 .container-left, .container-right{
