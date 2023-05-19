@@ -1,5 +1,7 @@
-img{
+.image-starship{
     width: 65%;
+    border-bottom: 0.2rem solid rgb(134, 68, 82);
+    
     
 }
 
@@ -19,3 +21,4 @@ img{
 .container-right >:first-child{
 margin-top: 5rem;
 }
+

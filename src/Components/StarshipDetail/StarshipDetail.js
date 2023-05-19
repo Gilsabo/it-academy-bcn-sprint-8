@@ -19,7 +19,7 @@ const StarshipDetail = () => {
 
   return (
     <>
-      {imageStarship && <img src={imageStarship} alt="fetched-starship" />}
+      {imageStarship && <img className="image-starship" src={imageStarship} alt="fetched-starship" />}
       
       <div className="starship">
         <div className="container-left">
