@@ -1,0 +1,35 @@
+.form-button{
+    all: unset;
+    cursor: pointer;
+    color:white;
+}
+
+.slash{
+    color:white;
+}
+
+form{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3rem;
+}
+
+.form-button{
+    margin: 0rem 0.5rem;
+}
+
+.icons{
+    color: white;
+    display: flex;
+    margin-left: 3rem
+}
+
+.login{
+    display: flex;
+    justify-content: space-between;
+}
+
+.instagram, .youtube{
+    margin-right: 1rem;
+}
