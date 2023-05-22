@@ -29,6 +29,20 @@
 .model-starship{
   margin-bottom: 0px;
 }
+
+.view-more-button{
+  all:unset;
+  margin: 1.5rem 0rem;
+  border-radius: 5px;
+  border: 1px solid white;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.view-more-button:hover{
+  background-color: white;
+  color: black;
+}
  
 
  

@@ -32,8 +32,6 @@ const Starships = () => {
   
   const [addOnePage, setAddOnePage] =useState(2)
 
-  
-
    const loadMoreData=()=>{    
     const one= 1
       setAddOnePage((prevPageNumber => prevPageNumber + one));
@@ -50,7 +48,6 @@ const Starships = () => {
         const numbers = response.data.results.map((item) => {
           const regex = /\/(\d+)\//;
           const number = item.url.match(regex);
-          
           return parseInt(number[1]);
         });
         setNumberURl(prevNumbers=>[...prevNumbers, ...numbers]);
@@ -78,7 +75,7 @@ const Starships = () => {
               </div>
             </Link>
           ))}
-          <button onClick={loadMoreData} type="button">View more...</button>
+          <button className="view-more-button" onClick={loadMoreData} type="button">View more...</button>
         </div>
       )}
     </>
