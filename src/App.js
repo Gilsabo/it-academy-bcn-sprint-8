@@ -11,6 +11,7 @@ import RootLayouts from "./Layouts/Layouts";
 import StarshipDetail, { starshipDetailsLoader } from "./Components/StarshipDetail/StarshipDetail";
 
 function App() {
+  
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element ={<RootLayouts />}>

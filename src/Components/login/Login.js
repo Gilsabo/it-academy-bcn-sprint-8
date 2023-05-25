@@ -46,7 +46,7 @@ const Login = () => {
     ]);
   };
 
-  console.log();
+
   return (
     <>
       <div className="register-buttons">
@@ -65,15 +65,15 @@ const Login = () => {
         <form action="" onSubmit={onSubmit} onClick={preventClosingModal}>
           <div className="user">
             <label htmlFor="user-name">User</label>
-            <input ref={userRef} type="text" />
+            <input ref={userRef} type="text" required/>
           </div>
           <div className="password">
             <label htmlFor="passowrd">Password</label>
-            <input ref={passwordRef} type="password" />
+            <input ref={passwordRef} type="password" required/>
           </div>
           <div className="sign-up-buttons">
-            <button className="log-in-button">Log in</button>
-            <button className="sign-up-button">Sign up</button>
+            <button onClick={closeModal} className="log-in-button">Log in</button>
+            <button onClick={closeModal} className="sign-up-button">Sign up</button>
           </div>
         </form>
       </div>
