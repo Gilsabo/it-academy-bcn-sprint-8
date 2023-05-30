@@ -14,7 +14,6 @@ const Pilots = ({ starship }) => {
         const responses = await Promise.all(promises);
         const names = responses.map((response) => response.data.name);
         console.log(responses[0].data.eye_color);
-
         setNameFromUse(names);
       } catch (error) {
         console.log(error);
@@ -44,7 +43,7 @@ const Pilots = ({ starship }) => {
             <img className="image-pilot" src={image} alt="pilot" />
             <h3>Name : {nameFromUse[index]}</h3>
           </div>
-        ))):(<h3>there are no pilots</h3>)}
+        ))):(<h3 className="pilot-not-found"> there are no pilots</h3>)}
       </div>
     </>
   );

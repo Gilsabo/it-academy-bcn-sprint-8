@@ -7,3 +7,21 @@
     display: flex;
     justify-content: center;
 }
+
+.pilot-not-found{
+    font-family: 'Star Jedi', sans-serif;
+    font-size: 48px;
+    color: #ffd700;
+    text-shadow: 0 0 20px #ffd700, 0 0 40px #ffd700, 0 0 60px #ffd700, 0 0 80px #ffd700;
+    animation: flicker 1.5s infinite;
+  }
+  
+  @keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow: 0 0 20px #ffd700, 0 0 40px #ffd700, 0 0 60px #ffd700, 0 0 80px #ffd700;
+    }
+    
+    20%, 24%, 56% {
+      text-shadow: none;
+    }
+  }

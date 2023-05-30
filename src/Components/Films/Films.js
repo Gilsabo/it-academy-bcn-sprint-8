@@ -13,9 +13,7 @@ const Films = ({ starship }) => {
         const promises = starship.films.map((item) => axios.get(item));
         const responses = await Promise.all(promises);
         const names = responses.map((response) => response.data.title);
-
-        console.log(names);
-
+        console.log(responses)
         setNameFromUse(names);
       } catch (error) {
         console.log(error);
