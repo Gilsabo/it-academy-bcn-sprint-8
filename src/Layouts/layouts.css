@@ -50,3 +50,35 @@ body{
     display: flex;
     justify-content: space-between;
 }
+
+.instagram, .facebook, .youtube, .kids{
+   
+    margin-left: 1rem;
+
+}
+
+svg{
+    width: 1.8rem;
+    height: 2rem;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+}
+
+.register-buttons{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3rem;
+    align-items: center;
+}
+
+.kids{
+    border-left: 1px solid white;
+    
+}
+
+.kids-svg{
+    padding: 0.2rem;
+}
