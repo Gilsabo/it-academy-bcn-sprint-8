@@ -22,7 +22,7 @@ const StarshipDetail = () => {
   const handleImageError = () => {
     setImageError(true);
   };
-
+console.log(starship)
   return (
     <>
       {imageStarship && !imageError ? (
@@ -36,9 +36,28 @@ const StarshipDetail = () => {
         <img className="image-starship" src={forofor} alt="fetched-starship" />
       )}
 
-      <div className="starship">
-        {/* Rest of the component */}
-      </div>
+        <div className="starship">
+          <div className="container-left">
+            <header className="name-starship">
+              <h1> {starship.name}</h1>
+            </header>
+            <p>Model: {starship.model} </p>
+            <p>Cost in credits: {starship.cost_in_credits}</p>
+            <p>Atmospheric speed: {starship.max_atmosphering_speed}</p>
+            <p>MGLT: {starship.MGLT}</p>
+            <p>Consumables: {starship.consumables}</p>
+            <p>Passengers: {starship.passengers}</p>
+          </div>
+          <div className="container-right">
+            <p>Manufacturer: {starship.manufacturer}</p>
+            <p>Length: {starship.length}</p>
+            <p>Crew: {starship.crew}</p>
+            <p>Cargo Capacity: {starship.cargo_capacity}</p>
+            <p>Manufacturer: {starship.manufacturer}</p>
+            {starship.pilots.length>0 ? (<p>Pilots: {starship.pilots.length}</p>):(<p>Pilots: No pilots</p>)}
+          </div>
+        </div>
+      
       <Pilots starship={starship} />
       <Films starship={starship} />
     </>
