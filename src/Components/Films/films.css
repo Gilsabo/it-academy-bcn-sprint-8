@@ -1,0 +1,11 @@
+.container-films{
+    display: flex;
+    justify-content: center;
+}
+
+.image-films{
+    width: 65%;
+    border-bottom: 0.2rem solid rgb(134, 68, 82);
+    
+    
+}
