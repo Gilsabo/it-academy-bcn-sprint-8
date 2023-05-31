@@ -85,7 +85,7 @@ svg{
 
 .register-button{
     all: unset;
-    border: 1px white solid;
+    
     padding: 1rem;
     border-radius: 5px;
     text-decoration: none;
