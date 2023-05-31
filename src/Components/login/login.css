@@ -35,17 +35,6 @@
     margin-right: 1rem;
 }
 
-form{
-    
-    border: 1px white solid;
-    border-radius: 5px;
-    background-color: black;
-    width: 30%;
-    height: 39%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
 
 .user, .password{
     display: flex;
@@ -54,7 +43,7 @@ form{
 }
 
 input{
-    width: 80%;
+    width: 50%;
     margin:0 auto;
 }
 
@@ -63,8 +52,9 @@ input{
     border: 1px white solid;
     border-radius: 5px;
     padding: 0.5rem;
-    margin-top:1rem;
+    margin-top:2rem;
     cursor: pointer;
+    color: white;
 }
 
 .toggled{
@@ -83,4 +73,16 @@ input{
 
 .untoggled{
     display: none;
+}
+
+.form{
+    border: 1px white solid;
+    border-radius: 5px;
+    background-color: black;
+    width: 22%;
+    height: 39%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
 }

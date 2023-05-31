@@ -32,7 +32,7 @@ const Login = ({ userData, setUserData }) => {
   return (
     <>
       <div>
-        <form action="" onSubmit={onSubmit}>
+        <form action="" className="form" onSubmit={onSubmit} >
           <div className="user">
             <label htmlFor="user-name">User</label>
             <input ref={userRef} type="text" required />
