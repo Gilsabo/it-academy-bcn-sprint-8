@@ -16,11 +16,11 @@ function App() {
   const [userData, setUserData] = useState(null);
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element ={<RootLayouts userData={userData}/> }>
-        <Route path="home" element={<Home />} />
-        <Route path="starships" element={<Starships />} />
-        <Route path="starships/:numberUrl" element= {< StarshipDetail/>} loader={starshipDetailsLoader} />
-        <Route path="login" element= {<Login  userData={userData} setUserData={setUserData}/> }  />
+      <Route exact path="/" element ={<RootLayouts userData={userData}/> }>
+        <Route exact path="home" element={<Home />} />
+        <Route exact path="starships" element={<Starships />} />
+        <Route exact path="starships/:numberUrl" element= {< StarshipDetail/>} loader={starshipDetailsLoader} />
+        <Route exact path="login" element= {<Login  userData={userData} setUserData={setUserData}/> }  />
       </Route>
     )
   );
