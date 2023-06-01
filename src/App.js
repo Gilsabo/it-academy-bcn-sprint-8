@@ -16,7 +16,7 @@ function App() {
   const [userData, setUserData] = useState(null);
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element ={<RootLayouts userData={userData}/>}>
+      <Route path="/" element ={<RootLayouts userData={userData}/> }>
         <Route path="home" element={<Home />} />
         <Route path="starships" element={<Starships />} />
         <Route path="starships/:numberUrl" element= {< StarshipDetail/>} loader={starshipDetailsLoader} />
@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className="App">
-      <RouterProvider router={router} />
+      <RouterProvider router={router} basename={process.env.PUBLIC_URL}/>
     </div>
   );
 }
