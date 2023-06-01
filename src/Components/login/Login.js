@@ -11,6 +11,7 @@ const Login = ({ userData, setUserData }) => {
   useEffect(() => {
     if (userData !== null) {
       localStorage.setItem("user", JSON.stringify(userData));
+      console.log(userData)
     }
   }, [userData]);
 
@@ -18,6 +19,7 @@ const Login = ({ userData, setUserData }) => {
     const user = localStorage.getItem("user")
       ? JSON.parse(localStorage.getItem("user"))
       : null;
+      
     setUserData(user);
   }, []);
 
