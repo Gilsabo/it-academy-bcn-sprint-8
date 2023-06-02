@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       <Router basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route path="/" element={<RootLayouts userData={userData} />} >
+          <Route path={process.env.PUBLIC_URL + "/"} element={<RootLayouts userData={userData} />} >
             <Route path="home" element={<Home />} />
             <Route path="starships" element={<Starships />} />
             <Route path="starships/:numberUrl" element={<StarshipDetail />} loader={starshipDetailsLoader} />
