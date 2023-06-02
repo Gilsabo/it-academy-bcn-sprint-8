@@ -85,11 +85,11 @@ const RootLayouts = ({ userData }) => {
         </div>
 
         <div className="links">
-          <NavLink className="home-nav" to={process.env.PUBLIC_URL + "/home"}>
+          <NavLink className="home-nav" to="/home">
             <h3>HOME</h3>
           </NavLink>
           {userData ? (
-             <NavLink className="starship-nav" to={process.env.PUBLIC_URL + "/starships"}>
+            <NavLink className="starship-nav" to="/starships">
               <h3>STARSHIPS</h3>
             </NavLink>
           ) : (

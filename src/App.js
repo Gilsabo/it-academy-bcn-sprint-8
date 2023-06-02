@@ -1,7 +1,7 @@
 import "./App.css";
 import Starships from "./Components/Starships/Starships";
 import {
-  createHashRouter,
+  createBrowserRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
@@ -12,10 +12,9 @@ import RootLayouts from "./Layouts/Layouts";
 import StarshipDetail, { starshipDetailsLoader } from "./Components/StarshipDetail/StarshipDetail";
 import { useState } from "react";
 
-
 function App() {
   const [userData, setUserData] = useState(null);
-  const router = createHashRouter(
+  const router = createBrowserRouter(
     createRoutesFromElements(
       <Route exact path="/" element ={<RootLayouts userData={userData}/> }>
         <Route exact path="home" element={<Home />} />
@@ -27,10 +26,8 @@ function App() {
   );
 
   return (
-
-    
     <div className="App">
-      <RouterProvider router={router} basename={process.env.PUBLIC_URL || "/"}/>
+      <RouterProvider router={router} basename={process.env.PUBLIC_URL}/>
     </div>
   );
 }
