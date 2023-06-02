@@ -1,10 +1,9 @@
 import "./App.css";
 import Starships from "./Components/Starships/Starships";
 import {
-  createBrowserRouter,
-  createRoutesFromElements,
+  BrowserRouter as Router,
+  Routes,
   Route,
-  RouterProvider,
 } from "react-router-dom";
 import Login from "./Components/login/Login";
 import Home from "./Components/Home/Home";
@@ -14,20 +13,19 @@ import { useState } from "react";
 
 function App() {
   const [userData, setUserData] = useState(null);
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route exact path="/" element ={<RootLayouts userData={userData}/> }>
-        <Route exact path="home" element={<Home />} />
-        <Route exact path="starships" element={<Starships />} />
-        <Route exact path="starships/:numberUrl" element= {< StarshipDetail/>} loader={starshipDetailsLoader} />
-        <Route exact path="login" element= {<Login  userData={userData} setUserData={setUserData}/> }  />
-      </Route>
-    )
-  );
 
   return (
     <div className="App">
-      <RouterProvider router={router} basename={process.env.PUBLIC_URL}/>
+      <Router basename={process.env.PUBLIC_URL}>
+        <Routes>
+          <Route path="/" element={<RootLayouts userData={userData} />} >
+            <Route path="home" element={<Home />} />
+            <Route path="starships" element={<Starships />} />
+            <Route path="starships/:numberUrl" element={<StarshipDetail />} loader={starshipDetailsLoader} />
+            <Route path="login" element={<Login userData={userData} setUserData={setUserData} />} />
+          </Route>
+        </Routes>
+      </Router>
     </div>
   );
 }
